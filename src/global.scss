@@ -24,3 +24,22 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+/* Loader */
+.loading-wrapper {
+    border: 1px solid var(--ion-color-primary);
+    border-radius: 20px !important;
+    overflow: hidden;
+    --backdrop-opacity: var(--ion-backdrop-opacity, 0.75);
+}
+
+.btn-degradado {
+    min-height: 50px !important;
+    height: 50px !important;
+    --background: var(--degradado);
+    --color: white !important;
+    z-index: 999;
+    margin-bottom: 2rem;
+    --box-shadow: -10px 9px 6px -5px rgba(61, 168, 255, 0.3);
+}

@@ -1,0 +1,37 @@
+ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+}
+
+.filtro_container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    align-items: stretch;
+    margin-top: 16px;
+    margin-left: 8px;
+    margin-bottom: 16px;
+}
+.col {
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 18px 18px;
+}
+
+.card {
+    width: 100%;
+}

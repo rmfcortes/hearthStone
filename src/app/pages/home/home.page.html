@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      HearthStone
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">HearthStone</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>No tienes mazos guardados</strong>
+    <p>Crea tu primer mazo para empezar a vivir la experiencia HearthStone</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="crearMazo()" expand="block" shape="round" class="btn-degradado">
+      Crear mazo
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

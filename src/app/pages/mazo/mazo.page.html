@@ -1,0 +1,38 @@
+<ion-header [translucent]="true" mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Mazo
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <div class="filtro_container">
+      <div class="col" *ngFor="let filtro of filtros;">
+        <ion-chip color="primary" mode="ios">
+          <ion-label>{{filtro}}</ion-label>
+        </ion-chip>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" mode="ios" class="ion-no-border">
+    <ion-toolbar>
+      <ion-title size="large">Mazo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="grid">
+    <div class="card" *ngFor="let card of cards" lazy-load-images>
+      <img [attr.data-src]="card.img" alt="">
+    </div>
+  </div>
+
+
+  <!-- Infinite scroll -->
+  <ion-infinite-scroll [disabled]="!hasMoreContent" (ionInfinite)="getCards($event)">
+    <ion-infinite-scroll-content class="infinteLoadingSpinner" loadingSpinner="crescent">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
